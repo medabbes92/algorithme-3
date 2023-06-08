@@ -1,0 +1,19 @@
+
+ALGORITHM algorithm3
+VAR
+    array : ARRAY_OF INTEGER;
+n,i,j,box : INTEGER
+BEGIN
+n = array.length-1
+FOR i FROM 0 TO n STEP 1 DO
+    FOR j FROM n TO i STEP 1 DO
+        IF (array[j]>array[j+1]) THEN
+        box:= array[j]
+        array[j]:= array[j+1]
+        array[j+1]:= box
+        END_IF
+    END_FOR
+END_FOR
+
+write ('the table is sorted',array)
+END
